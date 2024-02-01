@@ -21,7 +21,7 @@ DAQSimulator.add_devices_discovered_eventhandler(on_devices_discovered)
 DAQSimulator.start_scanning()
 
 #select device
-selectedId = int(input('Select device by id:'))
+selectedId = int(input('Select device by id:\n'))
 
 #detach from device discovery event
 DAQSimulator.remove_devices_discovered_eventhandler(on_devices_discovered)
@@ -40,7 +40,7 @@ simulator = DAQSimulator(discovered_devices[selectedId], samplingRate, numberOfC
 simulator.add_data_available_eventhandler(on_data_available)
 
 #wait until acquisition is supposed to be terminated
-input('Press ENTER to terminate data acquisition')
+input('Press ENTER to terminate data acquisition\n')
 
 #detach from data available event
 simulator.remove_data_available_eventhandler(on_data_available)

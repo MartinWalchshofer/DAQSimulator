@@ -3,7 +3,7 @@ import time
 import random
 
 class DAQSimulator:
-    __deviceName = ['UH-0000.00.00', 'UH-0000.00.01']
+    __deviceName = ['DAQ-0000.00.00', 'DAQ-0000.00.01']
     __isScanning = False
     __eventHandlers = []
 
